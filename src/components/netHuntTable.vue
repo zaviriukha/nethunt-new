@@ -311,31 +311,23 @@
                     if (valid) {
                         debugger
                         console.log('good valid')
+                        this.desserts.push(this.editedItem);
                         this.dialog = false
                         //this.close();
                     } else {
                         debugger
                         console.log('wrong valid')
-                        this.dialog = true
+                        //this.dialog = true
                     }
                 })
-                // if (this.$refs.observer.validate() === false) {
-                //     // debugger
-                //     console.log('wrong valid')
-                //     //this.dialog = true
-                // } else {
-                //     debugger
-                //     console.log('shit')
-                //     //this.dialog = false
-                // }
             },
             save() {
                 if (this.editedIndex > -1) {
-                    this.valid();
+                    //this.valid();
                     Object.assign(this.desserts[this.editedIndex], this.editedItem)
+                    this.dialog = false
                 } else {
                     this.valid();
-                    this.desserts.push(this.editedItem);
                 }
                 //this.close()
             },
